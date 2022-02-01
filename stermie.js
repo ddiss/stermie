@@ -37,7 +37,7 @@ function get_params()
 {
     var url, query_str, p, tab, i, params, tab2;
     query_str = window.location.href;
-    p = query_str.indexOf("?");
+    p = query_str.indexOf("#");
     if (p < 0)
         return {};
     query_str = query_str.substr(p + 1);
