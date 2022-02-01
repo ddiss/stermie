@@ -216,7 +216,7 @@ function connect_vm()
     if (typeof url != "undefined" && ui_show_connecting(url)) {
         sock_state = new Sock(url);
     } else {
-        term.writeln("Enter QEMU websocket URL above and press connect...");
+        term.writeln("Enter a QEMU websocket URL above and press connect...");
     }
 }
 
