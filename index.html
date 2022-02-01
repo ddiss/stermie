@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Stermie</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+    <input id="wsurl" type="text" placeholder="ws://127.0.0.1:45252"
+     onkeyup="wsurl_keyup()" />
+    <button id="btn_conn" class="favorite styled" type="button"
+     onclick="conn_click()">
+      Connect
+    </button>
+
+    <div id="term_wrap">
+      <div id="term_container"></div>
+      <div id="term_bar">
+        <progress id="net_progress"></progress>
+      </div>
+    </div>
+    <script type="text/javascript" src="term.js"></script>
+    <script type="text/javascript" src="stermie.js"></script>
+    <noscript>
+      <p>Javascript is disabled: nothing to see here!</p>
+    </noscript>
+
+    <p>QEMU's
+    <a href=https://lists.gnu.org/archive/html/qemu-devel/2018-10/msg04117.html>
+      chardev websocket</a> feature allows for Linux serial console access from
+    a web browser. It can be enabled via e.g.:<pre>
+    qemu-system-x86_64 -serial websocket:127.0.0.1:45252,server,nowait ...
+    </pre></p>
+
+    <p>By David Disseldorp. Heavily based on Fabrice Bellard's
+    <a href=https://bellard.org/jslinux/term.js>term.js</a>.</p>
+  </body>
+</html>
